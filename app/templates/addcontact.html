@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<div class="container">
+    <div class="card bg-dark text-white">
+        <img class="card-img" src="https://images.unsplash.com/photo-1580460848325-6b8d06d628cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="Phonebook">
+        <div class="card-img-overlay">
+          <h1 id="myheader" class="card-title text-center">PhoneBook</h1>
+          <p class="card-text text-center">Register your friends and family's contact below. </p>
+          <p class="card-text text-center">Remember to enter information in the required field!</p>
+        </div>
+      </div>
+      <h1 class="text-center"> Add a Contact </h1>
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <fieldset>
+                {{ form.firstname.label }}
+                {{ form.firstname(class='form-control', placeholder='First name') }}
+            </fieldset>
+            <fieldset>
+                {{ form.lastname.label }}
+                {{ form.lastname(class='form-control', placeholder='Last name') }}
+            </fieldset>
+            <fieldset>
+                {{ form.email.label }}
+                {{ form.email(class='form-control', placeholder='Email') }}
+            </fieldset>
+            <fieldset>
+                {{ form.address.label }}
+                {{ form.address(class='form-control', placeholder='Address') }}
+            </fieldset>
+            <fieldset>
+                {{ form.phonenumber.label }}
+                {{ form.phonenumber(class='form-control', placeholder='Cell Phone') }}
+            </fieldset>
+            <fieldset>
+                {{ form.homephonenumber.label }}
+                {{ form.homephonenumber(class='form-control', placeholder='Home Phone') }}
+            </fieldset>
+            <fieldset>
+                {{ form.workphonenumber.label }}
+                {{ form.workphonenumber(class='form-control', placeholder='Work Phone') }}
+            </fieldset>
+    
+            {{ form.submit(class='btn btn-success ') }}
+    
+        </div>
+    </form>
+    
+
+</div>
+
+{% endblock content %}

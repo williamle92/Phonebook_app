@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for user in posts %}
+
+<div class="card text-center">
+    <div class="card-header">
+        Contact
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title">{{ user.firstname }} {{ user.lastname }}</h5>
+        <p class="card-text">Email: {{ user.email }}</p>
+        <p class="card-text">Address: {{ user.address}}</p>
+        <p class="card-text"> Cell: {{ user.phonenumber}}</p>
+        <p class="card-text"> Work: {{ user.workphonenumber}}</p>
+        <p class="card-text"> Home: {{ user.homephonenumber}}</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a href="/addcontact" class="btn btn-primary">Add Another Contact</a>
+                </div>
+                <div class="col-4">
+                    <a href="{{ url_for('contact_update' , post_id=user.id )}}" class="btn btn-primary">Update</a>
+                </div>
+                <div class="col-4">
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Delete Contact
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Are you suure you would like to delete this contact?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Deleting this contact can not be undone. Would you still like to delete this contact?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="{{ url_for('delete', post_id=user.id) }}" role="button">Delete Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="card-footer text-muted text-center">
+    Added {{ user.date_created }}
+</div>
+</div>
+{% endfor %}
+
+{% endblock %}

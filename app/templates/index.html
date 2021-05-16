@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-center">Welcome to PhoneBook. </h1>
+      <p class="lead text-center mt-5">This program was created in mind to simulate a phonebook where you can add contacts and save that information to a database. It is a basic program which takes in only the firstname, lastname, email, address, and your phone numbers. Keep in mind some of the fields require inputs such as the phonenumber field.</p>
+      <p class="lead text-center mt-5">Add contacts with peace of mind, all of your contacts are protected with cutting edge encryption that will keep the police and FBI at bay.</p>
+      <p class="lead text-center mt-5">You can even add contacts of your mistress or sidechicks without anyone ever knowing.</p>
+
+    </div>
+  </div> 
+<h1 class="text-center mt-5 mb-5">From our users:</h1>
+<div class="container">
+<div class="row">
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://api.time.com/wp-content/uploads/2017/05/jfk.jpeg?w=824&quality=70" alt="JFK">
+      <div class="card-body">
+        <h5 class="card-title">They still don't know about her</h5>
+        <p class="card-text">"This app was very useful during my presidency, and I was able to keep all of my contacts a secret.. even from the CIA" -JFK</p>
+        <a href="/signup" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://c8d8q6i8.stackpathcdn.com/wp-content/uploads/2020/12/Future-rapper.jpg" alt="Future">
+      <div class="card-body">
+        <h5 class="card-title">STICK TALK</h5>
+        <p class="card-text">"Its lit" -Future</p>
+        <a href="/signup" class="btn btn-primary">Sign up</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X.jpg" alt="Bill Gates">
+      <div class="card-body">
+        <h5 class="card-title">Everything worked as advertised</h5>
+        <p class="card-text">"I accidentally left my phone unlocked and my relationship went downhill, should have left everything on this phone app." - Bill Gates</p>
+        <a href="signup" class="btn btn-primary">Sign up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+{% endblock %}
